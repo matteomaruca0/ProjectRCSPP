@@ -46,4 +46,3 @@ cmake -B build -S . && cmake --build build
 ### Da VS Code
 - **Compilazione rapida**: premi `Cmd + Shift + B`.
 - **Esecuzione / Debug**: premi `F5`.
-# ProjectRCSPP
