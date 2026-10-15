@@ -16,7 +16,7 @@ Guida rapida per creare nuovi file sorgente e compilare il progetto.
    )
    ```
 
-### Opzione B: Creare un nuovo eseguibile indipendente
+### Opzione B: Creare un nuovo eseguibile indipendente (usa questo)
 1. Crea il nuovo file sorgente (es. `src/nuovo_test.cpp`).
 2. In fondo a `CMakeLists.txt`, aggiungi:
    ```cmake

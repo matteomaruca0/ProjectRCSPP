@@ -31,7 +31,6 @@ set_target_properties(pathwyse_core PROPERTIES
 # Eseguibile di prova
 add_executable(progetto_test src/main.cpp)
 target_link_libraries(progetto_test PRIVATE pathwyse_core)
-
 # Flag per OpenMP (necessario per PathWyse)
 target_compile_options(progetto_test PRIVATE -fopenmp)
 target_link_options(progetto_test PRIVATE -fopenmp)
@@ -41,3 +40,10 @@ set_target_properties(progetto_test PROPERTIES
     BUILD_RPATH "${PW_DIR}/bin"
     INSTALL_RPATH "${PW_DIR}/bin"
 )
+
+# File main
+add_executable(mainSolution src/mainSolution.cpp)
+target_link_libraries(mainSolution PRIVATE pathwyse_core)
+target_compile_options(mainSolution PRIVATE -fopenmp)
+target_link_options(mainSolution PRIVATE -fopenmp)
+set_target_properties(mainSolution PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
