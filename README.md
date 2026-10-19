@@ -1,48 +1,12 @@
-# Progetto RCSPP con PathWyse
+# Progetto Algoritmi avanzati
 
-Guida rapida per creare nuovi file sorgente e compilare il progetto.
+## Affrontare e risolvere con algoritmi metaeuristici il problema di "Resource Constrained Shortest Path Problem (RCSPP)"
 
----
+Sono previste alcune tappe, valutate durante le lezioni di laboratorio:
 
-## 1. Come creare un nuovo file
-
-### Opzione A: Aggiungere classi/funzioni al progetto esistente
-1. Crea i tuoi file header e sorgente dentro la cartella `src/` (es. `src/mio_algoritmo.h` e `src/mio_algoritmo.cpp`).
-2. Apri `CMakeLists.txt` e aggiungi il file `.cpp` al target `progetto_test`:
-   ```cmake
-   add_executable(progetto_test 
-       src/main.cpp
-       src/mio_algoritmo.cpp
-   )
-   ```
-
-### Opzione B: Creare un nuovo eseguibile indipendente (usa questo)
-1. Crea il nuovo file sorgente (es. `src/nuovo_test.cpp`).
-2. In fondo a `CMakeLists.txt`, aggiungi:
-   ```cmake
-   add_executable(nuovo_test src/nuovo_test.cpp)
-   target_link_libraries(nuovo_test PRIVATE pathwyse_core)
-   target_compile_options(nuovo_test PRIVATE -fopenmp)
-   target_link_options(nuovo_test PRIVATE -fopenmp)
-   set_target_properties(nuovo_test PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
-   ```
-
----
-
-## 2. Come compilare ed eseguire
-
-### Da Terminale
-```bash
-# Compilazione (dalla cartella principale del progetto):
-cmake --build build
-
-# Se aggiungi un nuovo file o modifichi CMakeLists.txt, riconfigura con:
-cmake -B build -S . && cmake --build build
-
-# Esecuzione:
-./build/progetto_test
-```
-
-### Da VS Code
-- **Compilazione rapida**: premi `Cmd + Shift + B`.
-- **Esecuzione / Debug**: premi `F5`.
+1. **Studiare il problema RCSPP (Articolo da leggere).** Ogni studente legge 1 articolo scientifico relativo al problema RCSPP. Verrà erogato un questionario durante la lezione di laboratorio.
+2. **Installazione libreria PathWyse.** Ogni studente deve installare e compilare sul proprio calcolatore la libreria [PathWyse](https://github.com/pathwyse) (Articolo su PathWyse: PathWyse - Journal, PathWyse - Slides ODS). 
+3. **Familiarizzare con l'architettura software della libreria** e capire come la libreria prevede di integrare nuovi algoritmi. Verrà erogato un questionario durante la lezione di laboratorio.
+4. **Ideazione ed implementazione di un algoritmo metaeuristico per RCSPP** integrato in PathWyse. Consegna del codice sorgente, solo dei files modificati da voi.
+5. **Effettuare prove computazionali** (scaricate qui le istanze SPPRCLIB) e consegnare una tabella di risultati con commenti.
+6. **(Facoltativo con Bonus)** al posto del punto 4. lo studente può cimentarsi con l'implementazione dell'algoritmo Pulse (Paper) integrandolo nella libreria PathWyse.
