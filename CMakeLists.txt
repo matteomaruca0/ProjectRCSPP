@@ -47,3 +47,10 @@ target_link_libraries(mainSolution PRIVATE pathwyse_core)
 target_compile_options(mainSolution PRIVATE -fopenmp)
 target_link_options(mainSolution PRIVATE -fopenmp)
 set_target_properties(mainSolution PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#File tutorial
+add_executable(ese1 tutorial_cpp/es1_hello.cpp)
+target_link_libraries(ese1 PRIVATE pathwyse_core)
+target_compile_options(ese1 PRIVATE -fopenmp)
+target_link_options(ese1 PRIVATE -fopenmp)
+set_target_properties(ese1 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
