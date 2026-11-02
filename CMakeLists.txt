@@ -54,3 +54,16 @@ target_link_libraries(ese1 PRIVATE pathwyse_core)
 target_compile_options(ese1 PRIVATE -fopenmp)
 target_link_options(ese1 PRIVATE -fopenmp)
 set_target_properties(ese1 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#Ese2
+add_executable(ese2 tutorial_cpp/es2_inspect.cpp)
+target_link_libraries(ese2 PRIVATE pathwyse_core)
+target_compile_options(ese2 PRIVATE -fopenmp)
+target_link_options(ese2 PRIVATE -fopenmp)
+set_target_properties(ese2 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese2mio tutorial_cpp/es2_mio.cpp)
+target_link_libraries(ese2mio PRIVATE pathwyse_core)
+target_compile_options(ese2mio PRIVATE -fopenmp)
+target_link_options(ese2mio PRIVATE -fopenmp)
+set_target_properties(ese2mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
