@@ -28,13 +28,6 @@ set_target_properties(pathwyse_core PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES "${PW_DIR}/src/core"
 )
 
-# Eseguibile di prova
-add_executable(progetto_test src/main.cpp)
-target_link_libraries(progetto_test PRIVATE pathwyse_core)
-# Flag per OpenMP (necessario per PathWyse)
-target_compile_options(progetto_test PRIVATE -fopenmp)
-target_link_options(progetto_test PRIVATE -fopenmp)
-
 # Configurazione RPATH per trovare la dylib a runtime ovunque venga eseguito il binario
 set_target_properties(progetto_test PROPERTIES
     BUILD_RPATH "${PW_DIR}/bin"
@@ -42,11 +35,11 @@ set_target_properties(progetto_test PROPERTIES
 )
 
 # File main
-add_executable(mainSolution src/mainSolution.cpp)
-target_link_libraries(mainSolution PRIVATE pathwyse_core)
-target_compile_options(mainSolution PRIVATE -fopenmp)
-target_link_options(mainSolution PRIVATE -fopenmp)
-set_target_properties(mainSolution PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+add_executable(main src/main.cpp)
+target_link_libraries(main PRIVATE pathwyse_core)
+target_compile_options(main PRIVATE -fopenmp)
+target_link_options(main PRIVATE -fopenmp)
+set_target_properties(main PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
 
 #File tutorial
 add_executable(ese1 tutorial_cpp/es1_hello.cpp)
