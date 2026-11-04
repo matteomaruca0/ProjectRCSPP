@@ -67,3 +67,80 @@ target_link_libraries(ese2mio PRIVATE pathwyse_core)
 target_compile_options(ese2mio PRIVATE -fopenmp)
 target_link_options(ese2mio PRIVATE -fopenmp)
 set_target_properties(ese2mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#Ese3
+add_executable(ese3 tutorial_cpp/es3_solution.cpp)
+target_link_libraries(ese3 PRIVATE pathwyse_core)
+target_compile_options(ese3 PRIVATE -fopenmp)
+target_link_options(ese3 PRIVATE -fopenmp)
+set_target_properties(ese3 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese3mio tutorial_cpp/es3_mio.cpp)
+target_link_libraries(ese3mio PRIVATE pathwyse_core)
+target_compile_options(ese3mio PRIVATE -fopenmp)
+target_link_options(ese3mio PRIVATE -fopenmp)
+set_target_properties(ese3mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#Ese4
+add_executable(ese4 tutorial_cpp/es4_build.cpp)
+target_link_libraries(ese4 PRIVATE pathwyse_core)
+target_compile_options(ese4 PRIVATE -fopenmp)
+target_link_options(ese4 PRIVATE -fopenmp)
+set_target_properties(ese4 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese4mio tutorial_cpp/es4_mio.cpp)
+target_link_libraries(ese4mio PRIVATE pathwyse_core)
+target_compile_options(ese4mio PRIVATE -fopenmp)
+target_link_options(ese4mio PRIVATE -fopenmp)
+set_target_properties(ese4mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#Ese5
+add_executable(ese5 tutorial_cpp/es5_bounds.cpp)
+target_link_libraries(ese5 PRIVATE pathwyse_core)
+target_compile_options(ese5 PRIVATE -fopenmp)
+target_link_options(ese5 PRIVATE -fopenmp)
+set_target_properties(ese5 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese5mio tutorial_cpp/es5_mio.cpp)
+target_link_libraries(ese5mio PRIVATE pathwyse_core)
+target_compile_options(ese5mio PRIVATE -fopenmp)
+target_link_options(ese5mio PRIVATE -fopenmp)
+set_target_properties(ese5mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#Ese6
+add_executable(ese6 tutorial_cpp/es6_algorithms.cpp)
+target_link_libraries(ese6 PRIVATE pathwyse_core)
+target_compile_options(ese6 PRIVATE -fopenmp)
+target_link_options(ese6 PRIVATE -fopenmp)
+set_target_properties(ese6 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese6mio tutorial_cpp/es6_mio.cpp)
+target_link_libraries(ese6mio PRIVATE pathwyse_core)
+target_compile_options(ese6mio PRIVATE -fopenmp)
+target_link_options(ese6mio PRIVATE -fopenmp)
+set_target_properties(ese6mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese6b tutorial_cpp/es6b_pool.cpp)
+target_link_libraries(ese6b PRIVATE pathwyse_core)
+target_compile_options(ese6b PRIVATE -fopenmp)
+target_link_options(ese6b PRIVATE -fopenmp)
+set_target_properties(ese6b PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese6bmio tutorial_cpp/es6b_mio.cpp)
+target_link_libraries(ese6bmio PRIVATE pathwyse_core)
+target_compile_options(ese6bmio PRIVATE -fopenmp)
+target_link_options(ese6bmio PRIVATE -fopenmp)
+set_target_properties(ese6bmio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+#Ese7
+add_executable(ese7 tutorial_cpp/es7_two_resources.cpp)
+target_link_libraries(ese7 PRIVATE pathwyse_core)
+target_compile_options(ese7 PRIVATE -fopenmp)
+target_link_options(ese7 PRIVATE -fopenmp)
+set_target_properties(ese7 PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
+
+add_executable(ese7mio tutorial_cpp/es7_mio.cpp)
+target_link_libraries(ese7mio PRIVATE pathwyse_core)
+target_compile_options(ese7mio PRIVATE -fopenmp)
+target_link_options(ese7mio PRIVATE -fopenmp)
+set_target_properties(ese7mio PROPERTIES BUILD_RPATH "${PW_DIR}/bin")
