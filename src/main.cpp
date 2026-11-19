@@ -2,13 +2,15 @@
 #include <vector>
 #include <iomanip>
 #include "solver.h"
+#include "MyAlgorithm.h"
 
 int main(int argc, char** argv){
     std::cout << std::fixed << std::setprecision(1);
 
     Solver pw;
     pw.readProblem("instances/toy.txt");
-    pw.setupAlgorithms();
+    pw.setAlgorithms({"PWDefault"});
+    pw.addAlgorithm(*new TabuSearchAlgo("Tabu Search", pw.getProblem()));
     pw.solve();
 
     std::cout << "Nome: " << pw.getName() << " | nodi: " << pw.getNumberOfNodes() << std::endl;

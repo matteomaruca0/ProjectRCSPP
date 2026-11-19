@@ -28,14 +28,11 @@ set_target_properties(pathwyse_core PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES "${PW_DIR}/src/core"
 )
 
-# Configurazione RPATH per trovare la dylib a runtime ovunque venga eseguito il binario
-set_target_properties(progetto_test PROPERTIES
-    BUILD_RPATH "${PW_DIR}/bin"
-    INSTALL_RPATH "${PW_DIR}/bin"
-)
-
 # File main
-add_executable(main src/main.cpp)
+add_executable(main
+    src/main.cpp
+    src/MyAlgorithm.cpp
+)
 target_link_libraries(main PRIVATE pathwyse_core)
 target_compile_options(main PRIVATE -fopenmp)
 target_link_options(main PRIVATE -fopenmp)
