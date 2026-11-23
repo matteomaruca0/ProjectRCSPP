@@ -1,3 +1,5 @@
+#include <algorithm>
+
 //Contiene l'implementazione
 #include "MyAlgorithmTest.h"
 
@@ -11,13 +13,52 @@ TabuSearchAlgo::TabuSearchAlgo(std::string name, Problem* problem) : Algorithm(n
 }
 
 void TabuSearchAlgo::solve() {
-    //per ora genero un numero casuale di nodi tra la partenza e la fine e creo il tour di partenza in questo modo
 
-    int numNodes = this->problem->getNumNodes();
+    
 }
 
-std::list<int> getLenghtsTabuList(){
+int getLenghtsTabuList(){
 
+}
+
+// per ora genero un numero casuale di nodi tra la partenza e la fine 
+// e creo il tour di partenza in questo modo:
+// scelgo un nodo alla volta in modo casuale verificando che sia ammissibile la soluzione iniziale
+std::vector<int> TabuSearchAlgo::getStartSolution(){
+    std::vector<int> solutionStart;
+
+    std::srand(std::time(nullptr)); //con l'ora attuale
+
+    int numNodes = this->problem->getNumNodes();
+
+    //Genero il numero di nodi da generare
+    int startNode = problem->getOrigin();
+    int destNode = problem->getDestination();
+
+    Resource* capacity = problem->getRes(0);
+    int load = capacity->getInitValue();
+    int last = startNode;
+    
+    //Genero un nodo controllo che non è già compreso nel vettore e poi ripeto finche la capacità non sfora
+    //quando sfora esco
+
+    /*do {
+        int generatedNode = std::rand() % (numNodes - 2) + 1;
+
+        //Tramite la classe Resource estendo il nodo generato e poi verifico se ammissibile
+        int newLoad = capacity->extend(load, last, generatedNode);
+
+        //Cerca il nodo generato se non lo trova ritorna la fine del vettore
+        if (std::find(solutionStart.begin(), solutionStart.end(), generatedNode) == solutionStart.end() &&
+            capacity->isFeasible(newLoad, generatedNode)) {
+            load = newLoad;
+            last = generatedNode;
+            solutionStart.push_back(generatedNode);
+        }
+    } while ();*/
+    
+    
+    return solutionStart;
 }
 
 //Mossa di aggiunta di un nodo

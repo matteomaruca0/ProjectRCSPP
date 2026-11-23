@@ -4,6 +4,10 @@
 #include "solver.h"
 #include "MyAlgorithm.h"
 
+// Vogliamo ottenere un cammino elementare dal nodo di partenza al nodo di destinazione
+// che minimizzi il costo rispettando i limiti di capacità
+// per ogni c'è un premio (si somma al costo) e un consumo (che consuma la capacità)
+// per ogni arco ce un costo (si somma al costo)
 int main(int argc, char** argv){
     std::cout << std::fixed << std::setprecision(1);
 

@@ -7,6 +7,7 @@
 class TabuSearchAlgo : public Algorithm {
     public:
         TabuSearchAlgo(std::string name, Problem* problem);
+        ~TabuSearchAlgo() = default;
 
         //Solve
         void solve() override;
